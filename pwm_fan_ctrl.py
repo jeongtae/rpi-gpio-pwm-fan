@@ -21,10 +21,10 @@ IDLE_LOAD = 0
 # The tempratures unit is in celcius degrees. (0~100)
 # The fans load ratios unit is in percentage. (0~100)
 TEMP_LOAD_STEPS = [
-    (50, 40),
-    (60, 50),
-    (70, 80),
-    (75, 100)
+    (55, 40),
+    (58, 50),
+    (60, 80),
+    (63, 100)
 ]
 
 # Fan speed will change only of the difference of temperature is higher than hysteresis
@@ -62,7 +62,7 @@ try:
     while True:
         # Wait until next refresh
         sleep(INTERVAL)
-        
+
         # Read CPU temperature
         with open("/sys/class/thermal/thermal_zone0/temp", "r") as file:
             temp = float(file.read()) / 1000
