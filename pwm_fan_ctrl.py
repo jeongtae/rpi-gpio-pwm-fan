@@ -28,7 +28,7 @@ TEMP_LOAD_STEPS = [
 ]
 
 # Fan speed will change only of the difference of temperature is higher than hysteresis
-IDLE_HYST = 2
+IDLE_HYST = 1
 
 # Validate steps
 if len(TEMP_LOAD_STEPS) < 1:
